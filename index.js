@@ -12,7 +12,7 @@ bot.on('ready', () => {
 bot.on('message', async msg => {
   const args = msg.content.split(/ +/);
    if(args[0]!='?') return;
-   if(args.length == 1) return;
+   if(args.length != 2) return;
    
    const response = await axios.get('https://codeforces.com/api/user.status?handle=' + args[1]);
    const json = response.data;
