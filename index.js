@@ -17,7 +17,7 @@ bot.on('message', async msg => {
    const response = await axios.get('https://codeforces.com/api/user.status?handle=' + args[1]);
    const json = response.data;
    var problems = json.result; 
-   console.log(problems);
+  //  console.log(problems);
    var solved = {};
    var unsolved = {};
     for(var i = 0;i<problems.length;i++){
